@@ -15,4 +15,5 @@ const Calculator = {
         return sum
     }
 }
+
 module.exports = Calculator
