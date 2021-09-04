@@ -14,7 +14,6 @@ const Calculator = {
             
             //add using map
             let sum = 0;
-            
             splitNums.map(num => {
                 if (num < 0) {
                     negativeNums.push(num)
