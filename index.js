@@ -33,6 +33,4 @@ const Calculator = {
     }
 }
 
-console.log(Calculator.Add("1,-4,-8"))
-
 module.exports = Calculator
