@@ -13,6 +13,10 @@ describe('Add String Numbers', () => {
     it ('should return 0 if empty string', () => {
         expect(Calculator.Add("")).to.equal(0)
     })
+
+    it ('should return integer', () => {
+        expect(Calculator.Add("1,2")).to.be.a('number')
+    })
 })
 
 describe('Add String Numbers with new line', () => {
