@@ -34,3 +34,9 @@ describe('Support custom delimiter', () => {
         expect(Calculator.Add("//@\n2@3@8")).to.equal(13)
     })
 })
+
+describe('Add with a negative number', () => {
+    it ('should gives out list of negative numbers array', () => {
+        expect(Calculator.Add("1,-4,-5")).to.eql(['-4', '-5'])
+    })
+})
