@@ -17,6 +17,8 @@ const Calculator = {
             splitNums.map(num => {
                 if (num < 0) {
                     negativeNums.push(num)
+                } else if (num > 1000) {
+                    return sum
                 } else {
                     return sum += parseInt(num)
                 }
@@ -32,5 +34,7 @@ const Calculator = {
         
     }
 }
+
+console.log(Calculator.Add("2,1001"))
 
 module.exports = Calculator
