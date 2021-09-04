@@ -9,6 +9,10 @@ describe('Add String Numbers', () => {
     it ('should add and return wrong result', () => {
         expect(Calculator.Add("1,2,3")).to.not.equal(5)
     })
+
+    it ('should return 0 if empty string', () => {
+        expect(Calculator.Add("")).to.equal(0)
+    })
 })
 
 describe('Add String Numbers with new line', () => {
