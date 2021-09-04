@@ -1,10 +1,13 @@
+var Utils = require('./utils')
 
 const Calculator = {
     Add: function(numbers) {
         if (!numbers.length) return 0
     
+        let { delimiter, expression } = Utils.parseDelimiterAndExpression(numbers)
+        
         //split string to array
-        let splitNums = numbers.split(',')
+        let splitNums = expression.split(delimiter)
         
         //add using map
         let sum = 0;
@@ -15,5 +18,7 @@ const Calculator = {
         return sum
     }
 }
+
+console.log(Calculator.Add("//@\n2@3@8"))
 
 module.exports = Calculator

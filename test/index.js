@@ -28,3 +28,9 @@ describe('Add String Numbers with new line', () => {
         expect(Calculator.Add("1,\n2,4")).to.equal(7)
     })
 })
+
+describe('Support custom delimiter', () => {
+    it ('should parse and add numbers using the delimiter in the format', () => {
+        expect(Calculator.Add("//@\n2@3@8")).to.equal(13)
+    })
+})
