@@ -40,3 +40,9 @@ describe('Add with a negative number', () => {
         expect(Calculator.Add("1,-4,-5")).to.eql(['-4', '-5'])
     })
 })
+
+describe('Ignore Numbers', () => {
+    it ('should ignore numbers greater than 1000', () => {
+        expect(Calculator.Add("2, 1001")).to.equal(2)
+    })
+})
