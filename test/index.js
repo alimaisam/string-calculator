@@ -50,3 +50,9 @@ describe('Ignore Numbers', () => {
         expect(Calculator.Add("2, 1001")).to.equal(2)
     })
 })
+
+describe('Allow multiple delimiters', () => {
+    it ('should parse and sum numbers using multiple delimiters', () => {
+        expect(Calculator.Add("//$,@\n1$2@3")).to.equal(6)
+    })
+})

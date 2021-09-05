@@ -7,11 +7,14 @@ const Calculator = {
         try {
             if (!numbers.length) return 0
     
-            let { delimiter, expression } = Utils.parseDelimiterAndExpression(numbers)
+            let { delimiters, expression } = Utils.parseDelimiterAndExpression(numbers)
 
-            //split string to array
-            let splitNums = expression.split(delimiter)
+            //build regex or return string split
+            let delimitRegex = delimiters.length === 1 ? delimiters[0] : new RegExp(`[${delimiters.join('')}]+`)
             
+            //split string to array
+            let splitNums = expression.split(delimitRegex)
+
             //add using map
             let sum = 0;
             splitNums.map(num => {
@@ -34,5 +37,7 @@ const Calculator = {
         
     }
 }
+
+console.log(Calculator.Add("1,2,3"))
 
 module.exports = Calculator

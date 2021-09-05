@@ -2,10 +2,11 @@ const Utils = {
     parseDelimiterAndExpression: function(expression) {
         if (expression.startsWith('//')) {
             let expSplit = expression.split('\n')
-            let delimiter = expSplit[0].replace(/\/\//g, '')
-            return { delimiter, expression: expSplit[1] }
+            let delimitersCombined = expSplit[0].replace(/\/\//g, '')
+            let delimiterArr = delimitersCombined.split(',')
+            return { delimiters: delimiterArr, expression: expSplit[1] }
         }
-        return { delimiter: ',', expression }
+        return { delimiters: [','], expression }
     }
 }
 
