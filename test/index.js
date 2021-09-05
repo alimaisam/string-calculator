@@ -1,5 +1,5 @@
 var expect  = require('chai').expect;
-var Calculator = require('../index')
+var Calculator = require('../src/index')
 
 describe('Add String Numbers', () => {
     it ('should Add all the numbers in string', () => {

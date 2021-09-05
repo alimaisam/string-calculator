@@ -1,5 +1,5 @@
 var expect  = require('chai').expect;
-var Utils = require('../utils')
+var Utils = require('../src/utils')
 
 describe('Utility', () => {
     it ('should parse and return delimiter and expression', () => {
