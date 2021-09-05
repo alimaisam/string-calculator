@@ -47,12 +47,16 @@ describe('Add with a negative number', () => {
 
 describe('Ignore Numbers', () => {
     it ('should ignore numbers greater than 1000', () => {
-        expect(Calculator.Add("2, 1001")).to.equal(2)
+        expect(Calculator.Add("2,4,1001,1002")).to.equal(6)
     })
 })
 
 describe('Allow multiple delimiters', () => {
     it ('should parse and sum numbers using multiple delimiters', () => {
         expect(Calculator.Add("//$,@\n1$2@3")).to.equal(6)
+    })
+
+    it ('should parse and sum numbers using multiple delimiters of arbitrary length', () => {
+        expect(Calculator.Add("//$$$,@@@,&&&\n1$$$2@@@3&&&4")).to.equal(10)
     })
 })

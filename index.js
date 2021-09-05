@@ -38,6 +38,6 @@ const Calculator = {
     }
 }
 
-console.log(Calculator.Add("1,2,3"))
+//console.log(Calculator.Add("//$$$,@@@,&&&\n1$$$2@@@3&&&4"))
 
 module.exports = Calculator
