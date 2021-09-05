@@ -35,6 +35,4 @@ const Calculator = {
     }
 }
 
-console.log(Calculator.Add("2,1001"))
-
 module.exports = Calculator
