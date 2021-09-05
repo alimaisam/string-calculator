@@ -9,8 +9,8 @@ const Calculator = {
     
             let { delimiters, expression } = Utils.parseDelimiterAndExpression(numbers)
 
-            //build regex or return string split
-            let delimitRegex = delimiters.length === 1 ? delimiters[0] : new RegExp(`[${delimiters.join('')}]+`)
+            //build regex for string split
+            let delimitRegex = new RegExp(`[${delimiters.join('')}]+`)
             
             //split string to array
             let splitNums = expression.split(delimitRegex)
