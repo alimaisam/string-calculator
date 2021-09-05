@@ -20,6 +20,7 @@ const Calculator = {
             splitNums.map(num => {
                 if (num < 0) {
                     negativeNums.push(num)
+                    return sum
                 } else if (num > 1000) {
                     return sum
                 } else {
@@ -29,8 +30,8 @@ const Calculator = {
             })
 
             if (negativeNums.length > 0) throw new Error("Negatives not allowed")
-
             return sum;
+            
         } catch (e) {
             return negativeNums;
         }
