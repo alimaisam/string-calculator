@@ -33,6 +33,10 @@ describe('Support custom delimiter', () => {
     it ('should parse and add numbers using the delimiter in the format', () => {
         expect(Calculator.Add("//@\n2@3@8")).to.equal(13)
     })
+
+    it ('should parse and add numbers using arbitrary delimiters length', () => {
+        expect(Calculator.Add("//***\n2***3***8")).to.equal(13)
+    })
 })
 
 describe('Add with a negative number', () => {
